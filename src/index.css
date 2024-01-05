@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #0c1325;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.top20 {
+  top: 20%;
+}
+
+.text-hover-color:hover {
+  color: #3aa9a7 !important;
+  transition: color 300ms ease-in-out;
+}
+
+.drpdownContainer{
+  right: 5%;
+  top: 9%;
 }
