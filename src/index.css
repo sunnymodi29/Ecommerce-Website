@@ -41,3 +41,11 @@ body {
   top: 9%;
   max-height: 65vh;
  }
+
+ .buyNowBtn{
+  background: #3aa9a7;
+ }
+
+ .buyNowBtn:hover{
+  background: hsl(179, 49%, 50%);
+ }
