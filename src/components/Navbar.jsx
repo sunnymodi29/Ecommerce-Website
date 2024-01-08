@@ -14,12 +14,15 @@ function Navbar() {
     const handleActiveTab = (key) => {
         const temp = key.target.getAttribute("data-key")
         if (temp == 1) {
-            setTextColor("login");
+            setTextColor("home");
         }
         if (temp == 2) {
-            setTextColor("categories");
+            setTextColor("login");
         }
         if (temp == 3) {
+            setTextColor("categories");
+        }
+        if (temp == 4) {
             setTextColor("cart");
         }
     }
@@ -53,10 +56,11 @@ function Navbar() {
                 <input type='text' placeholder='Search For Products' className='searchbox rounded-lg px-4 py-2 outline-none bg-slate-800 hover:bg-slate-700 relative inline-block w-full focus:bg-slate-700 duration-300 ease-in-out transition-all' />
                 <img src='images/search.png' className='absolute top20 right-2 opacity-30' width={24} height={24} />
             </div>
-            <span data-key="1" className='text-hover-color cursor-pointer font-semibold opacity-85' onClick={handleActiveTab} style={{ color: textColor == "login" ? "#3aa9a7" : "#fff" }}>Login</span>
-            <button onClick={handleActiveTab}><span data-key="2" className='text-hover-color cursor-pointer font-semibold relative opacity-85' id='categories' onClick={() => setToggle(toggleDrp)} style={{ color: textColor == "categories" ? "#3aa9a7" : "#fff" }}>Categories</span></button>
-            <span data-key="3" className='text-hover-color cursor-pointer font-semibold opacity-85' onClick={handleActiveTab} style={{ color: textColor == "cart" ? "#3aa9a7" : "#fff" }}>Cart</span>
-            {toggleDrp && <div className='drpdownContainer absolute bg-slate-800 text-white font-semibold text-sm rounded-lg w-56'>
+            <span data-key="1" className='text-hover-color cursor-pointer font-semibold opacity-85' onClick={handleActiveTab} style={{ color: textColor == "home" ? "#3aa9a7" : "#fff" }}>Home</span>
+            <span data-key="2" className='text-hover-color cursor-pointer font-semibold opacity-85' onClick={handleActiveTab} style={{ color: textColor == "login" ? "#3aa9a7" : "#fff" }}>Login</span>
+            <button onClick={handleActiveTab}><span data-key="3" className='text-hover-color cursor-pointer font-semibold relative opacity-85' id='categories' onClick={() => setToggle(toggleDrp)} style={{ color: textColor == "categories" ? "#3aa9a7" : "#fff" }}>Categories</span></button>
+            <span data-key="4" className='text-hover-color cursor-pointer font-semibold opacity-85' onClick={handleActiveTab} style={{ color: textColor == "cart" ? "#3aa9a7" : "#fff" }}>Cart</span>
+            {toggleDrp && <div className='drpdownContainer absolute bg-slate-800 text-white font-semibold text-sm rounded-lg w-56 overflow-auto'>
                 {data ? data.map(item => (
                     <div key={item} id={item} className='opacity-90 cursor-pointer py-2 px-4 hover:bg-slate-700 duration-100 ease-in-out transition-all capitalize' onClick={ShowProducts}>{item.replaceAll("-", " ")}</div>
                 )) : ""}

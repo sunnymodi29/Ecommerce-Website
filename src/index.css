@@ -4,6 +4,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Scrollbar CSS Start */
+::-webkit-scrollbar {
+  width: 4px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+  background: transparent; 
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+  background: rgb(51 65 85 / 1);
+  border-radius: 10px;
+ }
+ /* Scrollbar CSS End */
+
 body {
   margin: 0;
   background: #0c1325;
@@ -24,4 +39,5 @@ body {
 .drpdownContainer{
   right: 5%;
   top: 9%;
-}
+  max-height: 65vh;
+ }
