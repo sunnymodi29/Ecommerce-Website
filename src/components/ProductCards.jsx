@@ -3,7 +3,9 @@ import React from 'react'
 const ProductCards = ({ title, thumbnailImage, productId, price, description }) => {
     return (
         <div className='bg-slate-800 rounded-lg max-w-72 cursor-pointer'>
-            <img className='w-72 h-40 rounded-t-lg' key={productId} src={thumbnailImage} alt={title} />
+            <div className='overflow-hidden'>
+                <img className='w-72 h-40 rounded-t-lg thumbnailHover' key={productId} src={thumbnailImage} alt={title} />
+            </div>
             <div className='py-2 px-4'>
                 <div className='w-full flex items-start justify-between'>
                     <h3 className='text-slate-300 font-semibold word-wrap w-48 capitalize truncate'>{title}</h3>

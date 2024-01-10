@@ -49,3 +49,8 @@ body {
  .buyNowBtn:hover{
   background: hsl(179, 49%, 50%);
  }
+
+ .thumbnailHover:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+ }
